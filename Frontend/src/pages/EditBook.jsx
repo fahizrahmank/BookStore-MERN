@@ -8,13 +8,13 @@ const EditBook = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [publishYear, setPublishYear] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const nav = useNavigate();
 
   const { id } = useParams();
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
     axios
       .get(`http://localhost:5555/books/${id}`)
       .then((response) => {
